@@ -19,11 +19,11 @@ public class Horse extends ChessPiece {
             return false;
         else if ((toLine == line) && (toColumn == column))
             return false;
-        else if (((toLine == (line + 3)) || (toLine == (line - 3))) && //проверяем ходит ли конь буквой "Г", т.е. на 3 клетки по горизонтали
+        else if (((toLine == (line + 2)) || (toLine == (line - 2))) && //проверяем ходит ли конь буквой "Г", т.е. на 2 клетки по горизонтали
                 ((toColumn == (column + 1)) || (toColumn == (column - 1)))) // и одну по вертикли
             return true;
         else if (((toLine == (line + 1)) || (toLine == (line - 1))) && //проверяем ходит ли конь буквой "Г", т.е. на 1 клетку по горизонтали
-                ((toColumn == (column + 3)) || (toColumn == (column - 3)))) // и 3 по вертикли
+                ((toColumn == (column + 2)) || (toColumn == (column - 2)))) // и 3 по вертикли
             return true;
         else
             return false;

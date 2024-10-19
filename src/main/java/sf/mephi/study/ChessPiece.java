@@ -4,7 +4,9 @@ abstract class ChessPiece {
     String color;
     boolean check = true;
 
-    ChessPiece(String color) {}
+    ChessPiece(String color) {
+        this.color = color;
+    }
 
 
 
