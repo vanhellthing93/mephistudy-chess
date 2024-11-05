@@ -11,7 +11,7 @@ public class King extends ChessPiece {
         if (limitCheck(line, column, toLine, toColumn) == false)
             return false;
         else if (((Math.abs(toLine - line)) <= 1) && ((Math.abs(toColumn - column)) <= 1)) //проверка, что король двигается на одну клетку
-            if ((chessBoard.board[toLine][toColumn] == null) && isUnderAttack(chessBoard, toLine, toColumn)) // проверка, что клетка пустая и не под боем
+            if ((chessBoard.board[toLine][toColumn] == null) && !isUnderAttack(chessBoard, toLine, toColumn)) // проверка, что клетка пустая и не под боем
                 return true;
             else if (((chessBoard.board[toLine][toColumn] != null) && canEat(chessBoard, toLine, toColumn)) && !isUnderAttack(chessBoard, toLine, toColumn)) //проверка, что клетка не под боем, и король может съесть фигуру на ней
                 return true;
@@ -39,7 +39,7 @@ public class King extends ChessPiece {
                     break;
                 else {
                     for (int j = 0; j < 8; j++) {
-                        if (board.board[i][j].color.equals("Black") && board.board[i][j].canMoveToPosition(board, i, j, line, column)) {
+                        if (board.board[i][j] != null && board.board[i][j].color.equals("Black") && board.board[i][j].canMoveToPosition(board, i, j, line, column)) {
                             underAttack = true;
                             break;
                         } else
@@ -55,7 +55,7 @@ public class King extends ChessPiece {
                     break;
                 else {
                     for (int j = 0; j < 8; j++) {
-                        if (board.board[i][j].color.equals("White") && board.board[i][j].canMoveToPosition(board, i, j, line, column)) {
+                        if (board.board[i][j] != null && board.board[i][j].color.equals("White") && board.board[i][j].canMoveToPosition(board, i, j, line, column)) {
                             underAttack = true;
                             break;
                         } else
