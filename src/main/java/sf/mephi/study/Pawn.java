@@ -2,9 +2,9 @@ package sf.mephi.study;
 
 public class Pawn extends ChessPiece {
 
-public Pawn(String color) {
-    super(color);
-}
+    public Pawn(String color) {
+        super(color);
+    }
 
     @Override
     public String getColor() {
@@ -25,11 +25,9 @@ public Pawn(String color) {
                 if (canEat(chessBoard, toLine, toColumn) == true)
                     return true;
                 else return false;
-            }
-            else
+            } else
                 return false;
-        }
-        else if (toColumn == column) { //проверка, что фигура двигается не по горизонтали
+        } else if (toColumn == column) { //проверка, что фигура двигается не по горизонтали
             if ((color.equals("White") && (toLine > line))) { //проверка, что фигура белая и она двигается вперёд, а не назад
                 if (toLine == (line + 2)) { //проверка, может ли фигура двигаться на 2 клетки вперёд
                     if (line == 1) {//проверка двигалась ли фигура
@@ -44,36 +42,30 @@ public Pawn(String color) {
                         return true;
                     else
                         return false;
-                }
-                else
+                } else
                     return false;
-            }
-            else if ((color.equals("Black") && (toLine < line))) { //проверка, что фигура черная и она двигается вперёд, а не назад
+            } else if ((color.equals("Black") && (toLine < line))) { //проверка, что фигура черная и она двигается вперёд, а не назад
                 if (toLine == (line - 2)) { //проверка, может ли фигура двигаться на 2 клетки вперёд
                     if (line == 6) {//проверка двигалась ли фигура
                         if ((chessBoard.board[line - 1][column] == null) && (chessBoard.board[line - 2][column] == null)) // проверка, есть ли фигуры на пути
                             return true;
                         else
                             return false;
-                    }
-                    else
+                    } else
                         return false;
-                }
-                else if (toLine == (line - 1)) { //проверка, двигается ли фигура на 1 клетку вперёд
+                } else if (toLine == (line - 1)) { //проверка, двигается ли фигура на 1 клетку вперёд
                     if (chessBoard.board[line - 1][column] == null)
                         return true;
                     else
                         return false;
-                }
-                else
+                } else
                     return false;
-            }
-            else
+            } else
                 return false;
-        }
-        else
+        } else
             return false;
     }
+
     @Override
     public String getSymbol() {
         return "P";
@@ -97,7 +89,7 @@ public Pawn(String color) {
             return true;
         else
             return false;
-            }
-
-
     }
+
+
+}

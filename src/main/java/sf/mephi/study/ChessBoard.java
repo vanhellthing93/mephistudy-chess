@@ -62,8 +62,8 @@ public class ChessBoard {
             if (board[0][0].getSymbol().equals("R") && board[0][4].getSymbol().equals("K") &&
                     board[0][1] == null && board[0][2] == null && board[0][3] == null) {
                 if (board[0][0].getColor().equals("White") && board[0][4].getColor().equals("White") &&
-                board[0][0].check && board[0][4].check &&
-                new King("White").isUnderAttack(this, 0, 2)) {
+                        board[0][0].check && board[0][4].check &&
+                        new King("White").isUnderAttack(this, 0, 2)) {
                     board[0][4] = null;
                     board[0][2] = new King("White");
                     board[0][2].check = false;
@@ -92,7 +92,7 @@ public class ChessBoard {
                     return true;
                 } else return false;
             } else return false;
-    }
+        }
     }
 
     public boolean castling7() {

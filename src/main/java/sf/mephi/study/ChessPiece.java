@@ -9,7 +9,6 @@ abstract class ChessPiece {
     }
 
 
-
     public String getColor() {
         return color;
     }

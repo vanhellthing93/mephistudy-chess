@@ -47,8 +47,7 @@ public class Rook extends ChessPiece {
                 return false;
             else
                 return true;
-        }
-        else
+        } else
             return false;
     }
 
@@ -62,8 +61,7 @@ public class Rook extends ChessPiece {
                     else
                         canMove = false;
                     break;
-                }
-                else if (chessBoard.board[line][i] == null)
+                } else if (chessBoard.board[line][i] == null)
                     canMove = true;
                 else {
                     canMove = false;
@@ -79,8 +77,7 @@ public class Rook extends ChessPiece {
                     else
                         canMove = false;
                     break;
-                }
-                else if (chessBoard.board[line][i] == null)
+                } else if (chessBoard.board[line][i] == null)
                     canMove = true;
                 else {
                     canMove = false;
@@ -103,8 +100,7 @@ public class Rook extends ChessPiece {
                     else
                         canMove = false;
                     break;
-                }
-                else if (chessBoard.board[i][toColumn] == null)
+                } else if (chessBoard.board[i][toColumn] == null)
                     canMove = true;
 
                 else {
@@ -121,8 +117,7 @@ public class Rook extends ChessPiece {
                     else
                         canMove = false;
                     break;
-                }
-                else if (chessBoard.board[i][toColumn] == null)
+                } else if (chessBoard.board[i][toColumn] == null)
                     canMove = true;
                 else {
                     canMove = false;

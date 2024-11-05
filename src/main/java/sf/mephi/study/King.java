@@ -1,6 +1,6 @@
 package sf.mephi.study;
 
-public class King extends ChessPiece{
+public class King extends ChessPiece {
 
     public King(String color) {
         super(color);
@@ -42,8 +42,7 @@ public class King extends ChessPiece{
                         if (board.board[i][j].color.equals("Black") && board.board[i][j].canMoveToPosition(board, i, j, line, column)) {
                             underAttack = true;
                             break;
-                        }
-                        else
+                        } else
                             underAttack = false;
                     }
                 }
@@ -59,15 +58,13 @@ public class King extends ChessPiece{
                         if (board.board[i][j].color.equals("White") && board.board[i][j].canMoveToPosition(board, i, j, line, column)) {
                             underAttack = true;
                             break;
-                        }
-                        else
+                        } else
                             underAttack = false;
                     }
                 }
             }
             return underAttack;
-        }
-        else
+        } else
             return false;
     }
 
